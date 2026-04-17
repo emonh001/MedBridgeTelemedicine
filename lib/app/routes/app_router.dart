@@ -5,6 +5,9 @@ import 'package:medbridge_telemedicine/app/routes/route_paths.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/login_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/splash_screen.dart';
 
+import 'package:medbridge_telemedicine/features/doctor/presentations/screens/appointment_schedule_screen.dart';
+import 'package:medbridge_telemedicine/features/doctor/presentations/screens/prescription_writing_screen.dart';
+
 class AppRouter {
   static final GoRouter router = GoRouter(
     initialLocation: RoutePaths.splash,
@@ -14,19 +17,30 @@ class AppRouter {
       GoRoute(
         path: RoutePaths.splash,
         name: RouteNames.splash,
-        pageBuilder: (context, state) => const MaterialPage(
-          child: SplashScreen(),
-        ),
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: SplashScreen()),
       ),
 
       GoRoute(
         path: RoutePaths.login,
         name: RouteNames.login,
-        pageBuilder: (context, state) => const MaterialPage(
-          child: LoginScreen(),
-        ),
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: LoginScreen()),
       ),
 
+      GoRoute(
+        path: RoutePaths.appointment,
+        name: RouteNames.appointment,
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: AppointmentScheduleScreen()),
+      ),
+
+        GoRoute(
+        path: RoutePaths.prescription,
+        name: RouteNames.prescription,
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: PrescriptionWritingScreen()),
+      ),
     ],
 
     // Error handling
