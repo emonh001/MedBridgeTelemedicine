@@ -21,7 +21,7 @@ class _PrescriptionWritingScreenState extends State<PrescriptionWritingScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // HEADER
+        
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -56,7 +56,7 @@ class _PrescriptionWritingScreenState extends State<PrescriptionWritingScreen> {
 
               const SizedBox(height: 20),
 
-              // MEDICATION CARD
+             
               _buildCard(
                 title: "Medication Name",
                 child: Column(
@@ -85,7 +85,7 @@ class _PrescriptionWritingScreenState extends State<PrescriptionWritingScreen> {
                 ),
               ),
 
-              // DOSAGE
+           
               _buildCard(
                 title: "Dosage",
                 child: Column(
@@ -111,7 +111,7 @@ class _PrescriptionWritingScreenState extends State<PrescriptionWritingScreen> {
                 ),
               ),
 
-              // FREQUENCY
+          
               _buildCard(
                 title: "Frequency",
                 child: DropdownButtonFormField<String>(
@@ -142,7 +142,7 @@ class _PrescriptionWritingScreenState extends State<PrescriptionWritingScreen> {
                 ),
               ),
 
-              // DURATION
+            
               _buildCard(
                 title: "Duration",
                 child: Column(
@@ -175,7 +175,7 @@ class _PrescriptionWritingScreenState extends State<PrescriptionWritingScreen> {
                 ),
               ),
 
-              // NOTES
+         
               _buildCard(
                 title: "Additional Notes",
                 child: TextField(
@@ -193,7 +193,7 @@ class _PrescriptionWritingScreenState extends State<PrescriptionWritingScreen> {
                 ),
               ),
 
-              // PHARMACY
+             
               _buildCard(
                 title: "Preferred Pharmacy",
                 child: Row(
@@ -218,7 +218,7 @@ class _PrescriptionWritingScreenState extends State<PrescriptionWritingScreen> {
 
               const SizedBox(height: 20),
 
-              // BUTTON
+         
               Container(
                 width: double.infinity,
                 height: 55,

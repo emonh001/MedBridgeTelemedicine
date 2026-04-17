@@ -44,7 +44,7 @@ class _AppointmentScheduleScreenState extends State<AppointmentScheduleScreen> {
       return today.subtract(Duration(days: 180 - index));
     });
 
-    selectedDateIndex = 180; // today center
+    selectedDateIndex = 180; 
   }
 
   void scrollToIndex(int index, {bool animate = true}) {
@@ -94,7 +94,7 @@ class _AppointmentScheduleScreenState extends State<AppointmentScheduleScreen> {
           children: [
             const SizedBox(height: 40),
 
-            /// 🔷 HEADER
+          
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -122,7 +122,7 @@ class _AppointmentScheduleScreenState extends State<AppointmentScheduleScreen> {
 
             const SizedBox(height: 20),
 
-            /// 🔷 INFINITE HORIZONTAL CALENDAR
+   
             SizedBox(
               height: 90,
               child: ListView.builder(
@@ -196,7 +196,7 @@ class _AppointmentScheduleScreenState extends State<AppointmentScheduleScreen> {
 
             const SizedBox(height: 20),
 
-            /// 🔷 SLOT TITLE
+        
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -208,7 +208,7 @@ class _AppointmentScheduleScreenState extends State<AppointmentScheduleScreen> {
 
             const SizedBox(height: 10),
 
-            /// 🔷 SLOT LIST
+          
             Expanded(
               child: ListView.builder(
                 itemCount: slots.length,
@@ -274,7 +274,7 @@ class _AppointmentScheduleScreenState extends State<AppointmentScheduleScreen> {
                             ],
                           ),
 
-                          /// RIGHT SIDE
+                     
                           if (isBooked)
                             Text("BOOKED",
                                 style: TextStyle(
@@ -309,7 +309,7 @@ class _AppointmentScheduleScreenState extends State<AppointmentScheduleScreen> {
               ),
             ),
 
-            /// 🔷 CONFIRM BUTTON
+         
             Container(
               width: double.infinity,
               padding:
