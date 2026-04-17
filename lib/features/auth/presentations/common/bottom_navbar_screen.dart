@@ -45,10 +45,6 @@ class BottomNavBarScreen extends StatelessWidget {
               label: "Home",
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.people_outline),
-              label: "Doctors",
-            ),
-            BottomNavigationBarItem(
               icon: Icon(Icons.calendar_today),
               label: "Bookings",
             ),

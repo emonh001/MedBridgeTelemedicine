@@ -53,17 +53,6 @@ class AppRouter {
           ),
 
 
-          StatefulShellBranch(
-            routes: [
-              GoRoute(
-                path: '/doctors',
-                builder: (context, state) => const Scaffold(
-                  body: Center(child: Text("Doctors Screen")),
-                ),
-              ),
-            ],
-          ),
-
 
           StatefulShellBranch(
             routes: [
