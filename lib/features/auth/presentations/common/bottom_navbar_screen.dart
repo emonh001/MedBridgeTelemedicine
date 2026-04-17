@@ -54,7 +54,7 @@ class BottomNavBarScreen extends StatelessWidget {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.chat_bubble_outline),
-              label: "Chat",
+              label: "Consulation",
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person_outline),

@@ -1,5 +1,4 @@
-import '../../doctor-screen/common/models/case_model.dart';
-
+import '../../common/models/case_model.dart';
 import 'package:flutter/material.dart';
 class SymptomsSection extends StatelessWidget {
   final CaseModel caseData;

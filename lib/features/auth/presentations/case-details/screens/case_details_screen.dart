@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../doctor-screen/common/models/case_model.dart';
-
+import '../../common/models/case_model.dart';
 import '../data/models/report_model.dart';
 import '../widgets/action_button.dart';
 import '../widgets/case_details_appbar.dart';
