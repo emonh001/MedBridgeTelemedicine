@@ -4,10 +4,14 @@ import 'package:medbridge_telemedicine/app/routes/route_names.dart';
 import 'package:medbridge_telemedicine/app/routes/route_paths.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/login_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/splash_screen.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/screens/symptoms_screen.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/screens/upload_patient_case_screen.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/screens/upload_report_screen.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/screens/vitals_input_screen.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
-    initialLocation: RoutePaths.splash,
+    initialLocation: RoutePaths.symptoms,
 
     routes: [
       // Root / Authentication Wrapper
@@ -26,6 +30,27 @@ class AppRouter {
           child: LoginScreen(),
         ),
       ),
+      GoRoute(path: RoutePaths.symptoms,
+          name: RoutePaths.symptoms,
+          pageBuilder: (context, state) => const MaterialPage(child: SymptomsScreen())
+      ),
+
+      GoRoute(path: RoutePaths.new_case,
+        name: RouteNames.new_case,
+        pageBuilder: (context, state) => const MaterialPage(child: UploadPatientCaseScreen())
+      ),
+
+
+     GoRoute(path: RoutePaths.vital_input,
+       name: RouteNames.vital_input,
+       pageBuilder: (context, state) => const MaterialPage(child: VitalsInputScreen())
+     ),
+      GoRoute(path: RoutePaths.upload_reports,
+        name: RouteNames.upload_reports,
+        pageBuilder: (context, state) => const MaterialPage(child: UploadReportScreen())
+      )
+
+
 
     ],
 
