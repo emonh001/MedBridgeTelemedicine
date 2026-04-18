@@ -4,6 +4,7 @@ import 'package:medbridge_telemedicine/app/routes/route_names.dart';
 import 'package:medbridge_telemedicine/app/routes/route_paths.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/login_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/role_selection_screen.dart';
+import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign-up-patient-screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/splash_screen.dart';
 
 class AppRouter {
@@ -33,6 +34,14 @@ class AppRouter {
         name: RouteNames.roleSelection,
         pageBuilder: (context, state) => const MaterialPage(
           child: RoleSelectionScreen(),
+        ),
+      ),
+
+      GoRoute(
+        path: RoutePaths.signUpPatient,
+        name: RouteNames.signUpPatient,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: SignUpPatientScreen(),
         ),
       ),
 
