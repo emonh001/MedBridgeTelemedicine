@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void _moveToNextScreen() async {
     await Future.delayed(Duration(seconds: 3));
-    context.go(RouteNames.login);
+    context.go(RouteNames.roleSelection);
   }
 
 
