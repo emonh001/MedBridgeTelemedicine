@@ -119,7 +119,7 @@ class RoleSelectionScreen extends StatelessWidget {
                   color: Colors.grey.shade200,
                   iconBg: Colors.grey.shade400,
                   onTap: () {
-                    //Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpHealthWorkerScreen()));
+                    context.push(RouteNames.signUpHealthWorker);
                   }, btnColor: Colors.grey, iconColor: Color(0xFF535F56),
                 ),
 
