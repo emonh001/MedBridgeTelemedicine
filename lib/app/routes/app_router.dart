@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:medbridge_telemedicine/app/routes/route_names.dart';
 import 'package:medbridge_telemedicine/app/routes/route_paths.dart';
-import 'package:medbridge_telemedicine/features/auth/presentations/doctor-screen/incoming-case/incoming_case_screen.dart';
 
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/login_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/splash_screen.dart';
 
-import 'package:medbridge_telemedicine/features/auth/presentations/doctor-screen/home/dashboard_screen.dart';
+import '../../features/doctor-presentation/presentation/case-details/screens/case_details_screen.dart';
+import '../../features/doctor-presentation/presentation/common/bottom_navbar_screen.dart';
+import '../../features/doctor-presentation/presentation/common/models/case_model.dart';
+import '../../features/doctor-presentation/presentation/home/dashboard_screen.dart';
+import '../../features/doctor-presentation/presentation/incoming-case/incoming_case_screen.dart';
 
-import '../../features/auth/presentations/case-details/screens/case_details_screen.dart';
-import '../../features/auth/presentations/common/bottom_navbar_screen.dart';
-import '../../features/auth/presentations/common/models/case_model.dart';
+
 
 
 

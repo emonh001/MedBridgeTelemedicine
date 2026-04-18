@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:medbridge_telemedicine/features/auth/presentations/doctor-screen/home/widget/header_section.dart';
-import 'package:medbridge_telemedicine/features/auth/presentations/doctor-screen/incoming-case/widgets/case_list.dart';
-import 'package:medbridge_telemedicine/features/auth/presentations/doctor-screen/incoming-case/widgets/case_sammary_card.dart';
-import 'package:medbridge_telemedicine/features/auth/presentations/doctor-screen/incoming-case/widgets/header_section_booking.dart';
+import 'package:medbridge_telemedicine/features/doctor-presentation/presentation/incoming-case/widgets/case_list.dart';
+import 'package:medbridge_telemedicine/features/doctor-presentation/presentation/incoming-case/widgets/case_sammary_card.dart';
+import 'package:medbridge_telemedicine/features/doctor-presentation/presentation/incoming-case/widgets/header_section_booking.dart';
 
 class IncomingCaseScreen extends StatefulWidget {
   const IncomingCaseScreen({super.key});
