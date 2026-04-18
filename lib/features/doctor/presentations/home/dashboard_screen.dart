@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:medbridge_telemedicine/features/doctor/presentation/home/widget/action_card.dart';
-import 'package:medbridge_telemedicine/features/doctor/presentation/home/widget/apointment_section.dart';
-import 'package:medbridge_telemedicine/features/doctor/presentation/home/widget/header_section.dart';
-import 'package:medbridge_telemedicine/features/doctor/presentation/home/widget/next_consultation_card.dart';
-import 'package:medbridge_telemedicine/features/doctor/presentation/home/widget/weekly_overview.dart';
+import 'package:medbridge_telemedicine/features/doctor/presentations/home/widget/action_card.dart';
+import 'package:medbridge_telemedicine/features/doctor/presentations/home/widget/apointment_section.dart';
+import 'package:medbridge_telemedicine/features/doctor/presentations/home/widget/header_section.dart';
+import 'package:medbridge_telemedicine/features/doctor/presentations/home/widget/next_consultation_card.dart';
+import 'package:medbridge_telemedicine/features/doctor/presentations/home/widget/weekly_overview.dart';
 
 
 class DashboardScreen extends StatelessWidget {

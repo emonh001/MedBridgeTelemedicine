@@ -7,10 +7,10 @@ import 'package:medbridge_telemedicine/features/auth/presentations/screens/login
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/splash_screen.dart';
 
 import '../../features/doctor/data/models/case_model.dart';
-import '../../features/doctor/presentation/case-details/screens/case_details_screen.dart';
-import '../../features/doctor/presentation/common/bottom_navbar_screen.dart';
-import '../../features/doctor/presentation/home/dashboard_screen.dart';
-import '../../features/doctor/presentation/incoming-case/incoming_case_screen.dart';
+import '../../features/doctor/presentations/case-details/screens/case_details_screen.dart';
+import '../../features/doctor/presentations/common/bottom_navbar_screen.dart';
+import '../../features/doctor/presentations/home/dashboard_screen.dart';
+import '../../features/doctor/presentations/incoming-case/incoming_case_screen.dart';
 
 
 
