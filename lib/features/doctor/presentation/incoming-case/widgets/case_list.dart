@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../../app/routes/route_paths.dart';
-import '../../common/models/case_model.dart';
+import '../../../data/models/case_model.dart';
 
 class CaseList extends StatelessWidget {
   final String name;

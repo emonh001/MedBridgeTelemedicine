@@ -6,11 +6,13 @@ import 'package:medbridge_telemedicine/app/routes/route_paths.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/login_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/splash_screen.dart';
 
-import '../../features/doctor-presentation/presentation/case-details/screens/case_details_screen.dart';
-import '../../features/doctor-presentation/presentation/common/bottom_navbar_screen.dart';
-import '../../features/doctor-presentation/presentation/common/models/case_model.dart';
-import '../../features/doctor-presentation/presentation/home/dashboard_screen.dart';
-import '../../features/doctor-presentation/presentation/incoming-case/incoming_case_screen.dart';
+import '../../features/doctor/data/models/case_model.dart';
+import '../../features/doctor/presentation/case-details/screens/case_details_screen.dart';
+import '../../features/doctor/presentation/common/bottom_navbar_screen.dart';
+import '../../features/doctor/presentation/home/dashboard_screen.dart';
+import '../../features/doctor/presentation/incoming-case/incoming_case_screen.dart';
+
+
 
 
 

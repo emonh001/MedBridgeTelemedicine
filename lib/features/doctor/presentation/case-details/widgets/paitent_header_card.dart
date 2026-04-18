@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../common/models/case_model.dart';
+import '../../../data/models/case_model.dart';
 
 class PatientHeaderCard extends StatelessWidget {
   final CaseModel caseData;
