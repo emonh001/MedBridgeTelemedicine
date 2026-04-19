@@ -23,10 +23,12 @@ class RoleSelectionScreen extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        actions: const [
+        actions: [
           Padding(
             padding: EdgeInsets.only(right: 12),
-            child: Icon(Icons.help_outline, color: Colors.black),
+            child: IconButton(onPressed: (){
+              context.push(RouteNames.settingsScreen);
+            }, icon: Icon(Icons.help_outline))
           )
         ],
       ),

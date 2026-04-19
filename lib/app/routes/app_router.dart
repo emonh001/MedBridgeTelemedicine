@@ -8,6 +8,7 @@ import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_up_health_worker_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_up_patient_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/splash_screen.dart';
+import 'package:medbridge_telemedicine/features/settings/presentation/screens/settings_screen.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -60,6 +61,14 @@ class AppRouter {
         name: RouteNames.signUpHealthWorker,
         pageBuilder: (context, state) => const MaterialPage(
           child: SignUpHealthWorkerScreen(),
+        ),
+      ),
+
+      GoRoute(
+        path: RoutePaths.settingsScreen,
+        name: RouteNames.settingsScreen,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: SettingsScreen(),
         ),
       ),
 

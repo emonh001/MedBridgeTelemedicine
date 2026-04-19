@@ -9,5 +9,6 @@ class RouteNames {
   static const String signUpPatient = '/signUpPatient';
   static const String signUpDoctor = '/signUpDoctor';
   static const String signUpHealthWorker = '/signUpHealthWorker';
+  static const String settingsScreen = '/settingsScreen';
 
 }
