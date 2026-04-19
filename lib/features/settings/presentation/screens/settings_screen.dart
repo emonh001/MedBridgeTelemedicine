@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medbridge_telemedicine/features/common/presentation/widgets/custom_app_bar.dart';
 import 'package:medbridge_telemedicine/features/settings/presentation/widgets/profile_card.dart';
 
 import '../widgets/help_line_card.dart';
@@ -13,23 +14,15 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF5F7FB),
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        title: const Text(
-          "MedBridge",
-          style: TextStyle(
-            color: Colors.blue,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 16),
-            child: Icon(Icons.notifications_none, color: Colors.blue),
-          )
-        ],
-      ),
+
+
+      appBar: CustomAppBar(
+          title: 'MedBridge',
+          icon: Icons.notifications_none,
+          onPressed: (){
+
+          }),
+
       body: SingleChildScrollView(
         padding: const EdgeInsets.only(top: 32, right: 24, left: 24),
         child: Column(

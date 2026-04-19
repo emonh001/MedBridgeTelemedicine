@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:medbridge_telemedicine/features/common/presentation/widgets/custom_app_bar.dart';
 
 import '../../../../app/routes/route_names.dart';
 import '../widgets/role_card.dart';
@@ -13,25 +14,14 @@ class RoleSelectionScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor:  const Color(0xFFF7F9FB),
 
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        title: const Text(
-          "MedBridge",
-          style: TextStyle(
-            color: Colors.blue,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 12),
-            child: IconButton(onPressed: (){
-              context.push(RouteNames.settingsScreen);
-            }, icon: Icon(Icons.help_outline))
-          )
-        ],
-      ),
+      //MedBridge, help_outline
+      appBar: CustomAppBar(
+          title: 'MedBridge',
+          icon: Icons.help_outline,
+          onPressed: (){
+            context.push(RouteNames.settingsScreen);
+          }),
+
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
