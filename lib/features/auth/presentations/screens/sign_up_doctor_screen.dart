@@ -1,5 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:medbridge_telemedicine/app/routes/route_names.dart';
 
 import '../../data/models/validator.dart';
 import '../widgets/dropdown_menu_widget.dart';
@@ -198,7 +200,9 @@ class _SignUpDoctorScreenState extends State<SignUpDoctorScreen> {
       SnackBar(content: Text('All good')),
     );
   }
-  void _onTapLoginButton(){}
+  void _onTapLoginButton(){
+    context.push(RouteNames.login);
+  }
 
   void dispose() {
     nameTEController.dispose();

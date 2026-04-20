@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../../app/routes/route_names.dart';
 import '../../data/models/validator.dart';
 import '../widgets/dropdown_menu_widget.dart';
 import '../widgets/sign-up-textfield.dart';
@@ -192,7 +194,9 @@ class _SignUpPatientScreenState extends State<SignUpPatientScreen> {
       SnackBar(content: Text('All good')),
     );
   }
-  void _onTapLoginButton(){}
+  void _onTapLoginButton(){
+    context.push(RouteNames.login);
+  }
 
 
   @override
