@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/widgets/document_item.dart';
-import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/widgets/recent_header.dart';
-import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/widgets/snap_photo_card.dart';
-import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/widgets/submit_button.dart';
-import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/widgets/upload_file_card.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/upload_reports/widgets/document_item.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/upload_reports/widgets/recent_header.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/upload_reports/widgets/snap_photo_card.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/new_patient_case/widgets/submit_button.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/upload_reports/widgets/upload_file_card.dart';
 
 class UploadReportScreen extends StatefulWidget {
   const UploadReportScreen({super.key});

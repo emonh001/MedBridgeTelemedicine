@@ -4,10 +4,10 @@ import 'package:medbridge_telemedicine/app/routes/route_names.dart';
 import 'package:medbridge_telemedicine/app/routes/route_paths.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/login_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/splash_screen.dart';
-import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/screens/symptoms_screen.dart';
-import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/screens/upload_patient_case_screen.dart';
-import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/screens/upload_report_screen.dart';
-import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/screens/vitals_input_screen.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/symptoms/screens/symptoms_screen.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/vital_input/screens/vitals_input_screen.dart';
+import '../../features/rural_health_worker/presentation/new_patient_case/screens/new_patient_case_screen.dart';
+import '../../features/rural_health_worker/presentation/upload_reports/screens/upload_report_screen.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/widgets/attachment_box.dart';
-import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/widgets/priority_chip.dart';
-import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/widgets/submit_button.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/new_patient_case/widgets/attachment_box.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/new_patient_case/widgets/priority_chip.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/new_patient_case/widgets/submit_button.dart';
 
 import '../widgets/input_field.dart';
 
@@ -71,7 +71,7 @@ class _UploadPatientCaseScreenState extends State<UploadPatientCaseScreen> {
                 ),
               ),
               const SizedBox(height: 20),
-              SubmitButton(text: 'Continue', onPressed: (){context.push('/symptoms');},),
+              SubmitButton(text: 'Continue', onPressed: (){context.push('/vital_input');},),
 
 
         

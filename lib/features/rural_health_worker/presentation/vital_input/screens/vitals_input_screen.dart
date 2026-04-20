@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/widgets/input_field.dart';
-import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/widgets/submit_button.dart';
-import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/widgets/vital_BP_input.dart';
-import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/widgets/vital_input_card.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/new_patient_case/widgets/input_field.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/new_patient_case/widgets/submit_button.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/vital_input/widgets/vital_BP_input.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/vital_input/widgets/vital_input_card.dart';
 
 class VitalsInputScreen extends StatefulWidget {
   const VitalsInputScreen({super.key});
@@ -16,7 +16,8 @@ class _VitalsInputScreenState extends State<VitalsInputScreen> {
   final TextEditingController _notesTEController = TextEditingController();
   final TextEditingController _pulseTEController = TextEditingController();
   final TextEditingController _oxygenTEController = TextEditingController();
-
+  final TextEditingController _tempTEController = TextEditingController();
+  final TextEditingController _respirationTEController = TextEditingController();
 
 
 
@@ -45,6 +46,7 @@ class _VitalsInputScreenState extends State<VitalsInputScreen> {
                 tag: 'mmHg',
                 icon: Icons.show_chart,
                 color: Colors.blue,
+
               ),
               VitalInputCard(
                 title: 'Pulse',
@@ -68,6 +70,7 @@ class _VitalsInputScreenState extends State<VitalsInputScreen> {
                 tag: '°C',
                 icon: Icons.thermostat,
                 color: Colors.green,
+                controller:_tempTEController ,
               ),
               VitalInputCard(
                 title: 'Respiration',
@@ -75,6 +78,7 @@ class _VitalsInputScreenState extends State<VitalsInputScreen> {
                 tag: 'rpm',
                 icon: Icons.wind_power,
                 color: Colors.lightBlue,
+                controller: _respirationTEController,
               ),
 
               InputField(
@@ -101,6 +105,8 @@ class _VitalsInputScreenState extends State<VitalsInputScreen> {
     _notesTEController.dispose();
     _pulseTEController.dispose();
     _oxygenTEController.dispose();
+    _tempTEController.dispose();
+    _respirationTEController.dispose();
     super.dispose();
   }
 }
