@@ -36,13 +36,10 @@ class _SplashScreenState extends State<SplashScreen> {
     _checkOnboardingAndNavigate();
   }
 
-  void _checkOnboardingAndNavigate() async {
-    await Future.delayed(const Duration(seconds: 3));
-
-    if (!mounted) return;
-
-    // Check if user has seen onboarding
-    final hasSeenOnboarding = await OnboardingProvider.hasSeenOnboarding();
+  void _moveToNextScreen() async {
+    await Future.delayed(Duration(seconds: 3));
+    context.go(RouteNames.roleSelection);
+  }
 
     if (!mounted) return;
 
