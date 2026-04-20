@@ -5,6 +5,9 @@ import 'package:medbridge_telemedicine/app/routes/route_paths.dart';
 
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/login_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/splash_screen.dart';
+import 'package:medbridge_telemedicine/features/bookings/presentation/screens/case_list_screen.dart';
+import 'package:medbridge_telemedicine/features/bookings/presentation/screens/case_status_tracking_screen.dart';
+import 'package:medbridge_telemedicine/features/common/screen/main_nav_holder_screen.dart';
 
 import '../../features/doctor/data/models/case_model.dart';
 import '../../features/doctor/presentations/case-details/screens/case_details_screen.dart';
@@ -12,80 +15,59 @@ import '../../features/doctor/presentations/common/bottom_navbar_screen.dart';
 import '../../features/doctor/presentations/home/dashboard_screen.dart';
 import '../../features/doctor/presentations/incoming-case/incoming_case_screen.dart';
 
-
-
-
-
-
-
 class AppRouter {
   static final GoRouter router = GoRouter(
-    initialLocation: RoutePaths.dashboard,
+    //initialLocation: RoutePaths.splash,
+    //initialLocation: RoutePaths.dashboard,
+    initialLocation: RoutePaths.caseList,
+    //initialLocation: RoutePaths.caseStatusTracking,
 
     routes: [
-
       GoRoute(
         path: RoutePaths.splash,
         name: RouteNames.splash,
-        pageBuilder: (context, state) =>
-        const MaterialPage(child: SplashScreen()),
+        pageBuilder: (context, state) => const MaterialPage(child: SplashScreen()),
       ),
 
       GoRoute(
         path: RoutePaths.login,
         name: RouteNames.login,
-        pageBuilder: (context, state) =>
-        const MaterialPage(child: LoginScreen()),
+        pageBuilder: (context, state) => const MaterialPage(child: LoginScreen()),
       ),
-
 
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) {
-          return BottomNavBarScreen(shell: navigationShell);
+          return MainNavHolderScreen(shell: navigationShell);
         },
         branches: [
-
           StatefulShellBranch(
             routes: [
-              GoRoute(
-                path: RoutePaths.dashboard,
-                name: RouteNames.dashboard,
-                builder: (context, state) => const DashboardScreen(),
-              ),
+              GoRoute(path: RoutePaths.dashboard, name: RouteNames.dashboard, builder: (context, state) => const DashboardScreen()),
             ],
           ),
 
-
-
+          StatefulShellBranch(
+            routes: [GoRoute(path: '/doctors', builder: (context, state) => const Scaffold(body: Center(child: Text("Doctors Screen"))),)],
+          ),
           StatefulShellBranch(
             routes: [
               GoRoute(
-                path: RoutePaths.booking,
-                name: RoutePaths.booking,
-                builder: (context, state) => const IncomingCaseScreen(),
-
-                routes: [
-                  GoRoute(
-                    path: 'case-detail', //
-                    builder: (context, state) {
-                      final caseData = state.extra as CaseModel;
-
-                      return CaseDetailScreen(caseData: caseData);
-                    },
-                  ),
-                ],
+                path: RoutePaths.caseList,
+                //name: RouteNames.caseList,
+                builder: (context, state) => CaseListScreen(),
               ),
+              /*GoRoute(
+                path: RoutePaths.caseStatusTracking,
+                builder: (context, state) => const CaseStatusTrackingScreen(),
+              ),*/
             ],
           ),
-
 
           StatefulShellBranch(
             routes: [
               GoRoute(
                 path: '/chat',
-                builder: (context, state) => const Scaffold(
-                  body: Center(child: Text("Chat Screen")),
-                ),
+                builder: (context, state) => const Scaffold(body: Center(child: Text("Chat Screen"))),
               ),
             ],
           ),
@@ -95,9 +77,7 @@ class AppRouter {
             routes: [
               GoRoute(
                 path: '/profile',
-                builder: (context, state) => const Scaffold(
-                  body: Center(child: Text("Profile Screen")),
-                ),
+                builder: (context, state) => const Scaffold(body: Center(child: Text("Profile Screen"))),
               ),
             ],
           ),
@@ -105,10 +85,6 @@ class AppRouter {
       ),
     ],
 
-    errorBuilder: (context, state) => Scaffold(
-      body: Center(
-        child: Text('Route not found: ${state.uri.path}'),
-      ),
-    ),
+    errorBuilder: (context, state) => Scaffold(body: Center(child: Text('Route not found: ${state.uri.path}'))),
   );
 }
