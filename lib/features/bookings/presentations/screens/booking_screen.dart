@@ -4,6 +4,7 @@ import '../widgets/doctor_card.dart';
 import '../widgets/dropdown_field.dart';
 import '../widgets/input_field.dart';
 import '../widgets/payment_option.dart';
+import '../widgets/primary_button.dart';
 import 'appointment_confirmation.dart';
 
 class BookingScreen extends StatefulWidget {
