@@ -100,10 +100,9 @@ class AppRouter {
           StatefulShellBranch(
             routes: [
               GoRoute(
-                path: '/chat',
-                builder: (context, state) => const Scaffold(
-                  body: Center(child: Text("Chat Screen")),
-                ),
+                path: RoutePaths.appointmentShedule,
+                name: RoutePaths.appointmentShedule,
+                builder: (context, state) => const AppointmentScheduleScreen(),
               ),
             ],
           ),
