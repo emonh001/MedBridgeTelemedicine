@@ -3,7 +3,12 @@ import 'package:go_router/go_router.dart';
 import 'package:medbridge_telemedicine/app/routes/route_names.dart';
 import 'package:medbridge_telemedicine/app/routes/route_paths.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/login_screen.dart';
+import 'package:medbridge_telemedicine/features/auth/presentations/screens/role_selection_screen.dart';
+import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_up_doctor_screen.dart';
+import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_up_health_worker_screen.dart';
+import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_up_patient_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/splash_screen.dart';
+import 'package:medbridge_telemedicine/features/settings/presentation/screens/settings_screen.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -24,6 +29,46 @@ class AppRouter {
         name: RouteNames.login,
         pageBuilder: (context, state) => const MaterialPage(
           child: LoginScreen(),
+        ),
+      ),
+
+      GoRoute(
+        path: RoutePaths.roleSelection,
+        name: RouteNames.roleSelection,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: RoleSelectionScreen(),
+        ),
+      ),
+
+      GoRoute(
+        path: RoutePaths.signUpPatient,
+        name: RouteNames.signUpPatient,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: SignUpPatientScreen(),
+        ),
+      ),
+
+      GoRoute(
+        path: RoutePaths.signUpDoctor,
+        name: RouteNames.signUpDoctor,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: SignUpDoctorScreen(),
+        ),
+      ),
+
+      GoRoute(
+        path: RoutePaths.signUpHealthWorker,
+        name: RouteNames.signUpHealthWorker,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: SignUpHealthWorkerScreen(),
+        ),
+      ),
+
+      GoRoute(
+        path: RoutePaths.settingsScreen,
+        name: RouteNames.settingsScreen,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: SettingsScreen(),
         ),
       ),
 
