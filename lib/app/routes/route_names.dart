@@ -3,6 +3,9 @@ class RouteNames {
 
   static const String splash = '/splash';
   static const String login = '/login';
+  static const String booking = '/booking';
+  static const String appointment = '/appointment';
+  static const String appointmentConfirmation = '/appointmentConfirmation';
   static const String homeScreen = '/user_home_flow';
   static const String userParentScreen = '/user-parent';
   static const String doctorProfileScreen = '/doctor-profile';

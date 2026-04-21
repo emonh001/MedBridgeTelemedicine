@@ -15,6 +15,10 @@ import '../../features/user_home_flow/presentation/doctor_search_screen.dart';
 import '../../features/user_home_flow/presentation/home_screen.dart';
 import '../../features/user_home_flow/presentation/parent/user_parent_screen.dart';
 
+import '../../features/bookings/presentations/screens/appointment_confirmation.dart';
+import '../../features/bookings/presentations/screens/my_appointment_screen.dart';
+import '../../features/bookings/presentations/screens/booking_screen.dart';
+
 class AppRouter {
   static final GoRouter router = GoRouter(
     initialLocation: RouteNames.userParentScreen, // Use RouteNames or RoutePaths consistently
@@ -34,6 +38,28 @@ class AppRouter {
           child: LoginScreen(),
         ),
       ),
+      GoRoute(
+        path: RoutePaths.booking,
+        name: RouteNames.booking,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: BookingScreen(),
+        ),
+      ),
+      GoRoute(
+        path: RoutePaths.appointment,
+        name: RouteNames.appointment,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: MyAppointmentsScreen(),
+        ),
+      ),
+      GoRoute(
+        path: RoutePaths.appointmentConfirmation,
+        name: RouteNames.appointmentConfirmation,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: AppointmentConfirmationScreen(),
+        ),
+      ),
+
 
       //User Home Flow
       GoRoute(
