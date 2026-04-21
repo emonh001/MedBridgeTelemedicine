@@ -3,6 +3,10 @@ class RouteNames {
 
   static const String splash = '/splash';
   static const String login = '/login';
+  static const String new_case = '/new_case';
+  static const String symptoms = '/symptoms';
+  static const String vital_input = '/vital_input';
+  static const String upload_reports = '/upload_report';
   static const String appointment = '/appointment';
   static const String prescription = '/prescription';
   static const String dashboard = '/dashboard';
