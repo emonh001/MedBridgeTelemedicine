@@ -4,7 +4,30 @@ import 'package:medbridge_telemedicine/app/routes/route_names.dart';
 import 'package:medbridge_telemedicine/app/routes/route_paths.dart';
 
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/login_screen.dart';
+import 'package:medbridge_telemedicine/features/auth/presentations/screens/role_selection_screen.dart';
+import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_up_doctor_screen.dart';
+import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_up_health_worker_screen.dart';
+import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_up_patient_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/splash_screen.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/symptoms/screens/symptoms_screen.dart';
+import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/vital_input/screens/vitals_input_screen.dart';
+import '../../features/rural_health_worker/presentation/new_patient_case/screens/new_patient_case_screen.dart';
+import '../../features/rural_health_worker/presentation/upload_reports/screens/upload_report_screen.dart';
+
+class AppRouter {
+  static final GoRouter router = GoRouter(
+    initialLocation: RoutePaths.symptoms,
+import 'package:medbridge_telemedicine/features/settings/presentation/screens/settings_screen.dart';
+
+import '../../features/user_home_flow/presentation/availability_time_set_screen.dart';
+import '../../features/user_home_flow/presentation/doctor_profile_screen.dart';
+import '../../features/user_home_flow/presentation/doctor_search_screen.dart';
+import '../../features/user_home_flow/presentation/home_screen.dart';
+import '../../features/user_home_flow/presentation/parent/user_parent_screen.dart';
+
+import '../../features/bookings/presentations/screens/appointment_confirmation.dart';
+import '../../features/bookings/presentations/screens/my_appointment_screen.dart';
+import '../../features/bookings/presentations/screens/booking_screen.dart';
 
 import 'package:medbridge_telemedicine/features/doctor/presentations/screens/appointment_schedule_screen.dart';
 import 'package:medbridge_telemedicine/features/doctor/presentations/screens/prescription_writing_screen.dart';
@@ -27,15 +50,14 @@ class AppRouter {
     routes: [
 
       GoRoute(
-        path: RoutePaths.splash,
+        path: RouteNames.splash,
         name: RouteNames.splash,
         pageBuilder: (context, state) =>
             const MaterialPage(child: SplashScreen()),
     
       ),
-
       GoRoute(
-        path: RoutePaths.login,
+        path: RouteNames.login,
         name: RouteNames.login,
         pageBuilder: (context, state) =>
             const MaterialPage(child: LoginScreen()),
@@ -54,6 +76,119 @@ class AppRouter {
         pageBuilder: (context, state) =>
             const MaterialPage(child: PrescriptionWritingScreen()),
      
+      ),
+      GoRoute(
+        path: RoutePaths.booking,
+        name: RouteNames.booking,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: BookingScreen(),
+        ),
+      ),
+      GoRoute(
+        path: RoutePaths.appointment,
+        name: RouteNames.appointment,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: MyAppointmentsScreen(),
+        ),
+      ),
+      GoRoute(
+        path: RoutePaths.appointmentConfirmation,
+        name: RouteNames.appointmentConfirmation,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: AppointmentConfirmationScreen(),
+        ),
+      ),
+
+
+      //User Home Flow
+      GoRoute(
+        path: RouteNames.homeScreen,
+        name: RouteNames.homeScreen,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: HomeScreen(),
+        ),
+      ),
+      GoRoute(
+        path: RouteNames.userParentScreen,
+        name: RouteNames.userParentScreen,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: UserParentScreen(),
+        ),
+      ),
+      GoRoute(
+        path: RouteNames.doctorProfileScreen,
+        name: RouteNames.doctorProfileScreen,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: DoctorProfileScreen(),
+      GoRoute(
+        path: RoutePaths.roleSelection,
+        name: RouteNames.roleSelection,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: RoleSelectionScreen(),
+        ),
+      ),
+
+      GoRoute(
+        path: RoutePaths.signUpPatient,
+        name: RouteNames.signUpPatient,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: SignUpPatientScreen(),
+        ),
+      ),
+
+      GoRoute(
+        path: RoutePaths.signUpDoctor,
+        name: RouteNames.signUpDoctor,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: SignUpDoctorScreen(),
+        ),
+      ),
+
+      GoRoute(
+        path: RouteNames.findExpertise,
+        name: RouteNames.findExpertise,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: FindExpertiseScreen(),
+        path: RoutePaths.signUpHealthWorker,
+        name: RouteNames.signUpHealthWorker,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: SignUpHealthWorkerScreen(),
+        ),
+      ),
+      GoRoute(path: RoutePaths.symptoms,
+          name: RoutePaths.symptoms,
+          pageBuilder: (context, state) => const MaterialPage(child: SymptomsScreen())
+      ),
+
+      GoRoute(path: RoutePaths.new_case,
+        name: RouteNames.new_case,
+        pageBuilder: (context, state) => const MaterialPage(child: UploadPatientCaseScreen())
+      ),
+
+
+     GoRoute(path: RoutePaths.vital_input,
+       name: RouteNames.vital_input,
+       pageBuilder: (context, state) => const MaterialPage(child: VitalsInputScreen())
+     ),
+      GoRoute(path: RoutePaths.upload_reports,
+        name: RouteNames.upload_reports,
+        pageBuilder: (context, state) => const MaterialPage(child: UploadReportScreen())
+      )
+
+
+
+      GoRoute(
+        path: RouteNames.availabilityTimeSet,
+        name: RouteNames.availabilityTimeSet,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: AvailabilityTimeSetScreen(),
+        ),
+      ),
+        path: RoutePaths.settingsScreen,
+        name: RouteNames.settingsScreen,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: SettingsScreen(),
+        ),
       ),
 
 
