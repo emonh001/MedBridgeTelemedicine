@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:medbridge_telemedicine/features/common/presentation/widgets/custom_app_bar.dart';
+import 'package:medbridge_telemedicine/features/common/presentations/widgets/custom_app_bar.dart';
 
 import '../../../../app/routes/route_names.dart';
 import '../widgets/role_card.dart';
