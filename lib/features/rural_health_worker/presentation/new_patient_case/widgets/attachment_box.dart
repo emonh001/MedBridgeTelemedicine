@@ -55,7 +55,7 @@ class _AttachmentBoxState extends State<AttachmentBox> {
                           onPressed: pickImage,
 
                           child: Row(
-                            mainAxisSize: .min,
+                            mainAxisSize: MainAxisSize.min,
                             children: [
                               Icon(Icons.camera_alt_outlined, size: 40),
                               SizedBox(width: 10),

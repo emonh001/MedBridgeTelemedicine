@@ -17,8 +17,8 @@ class PrimaryActionButton extends StatelessWidget {
     return SizedBox(
       child: ElevatedButton.icon(
         onPressed: onTap,
-        icon: Icon(Icons.arrow_right_alt),
-        iconAlignment: .end,
+        icon: icon ?? Icon(Icons.arrow_right_alt),
+        iconAlignment: IconAlignment.end,
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(16)),
@@ -29,7 +29,7 @@ class PrimaryActionButton extends StatelessWidget {
           text,
           style: Theme.of(context).textTheme.titleSmall!.copyWith(
             color: Colors.white,
-            fontWeight: .bold,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),

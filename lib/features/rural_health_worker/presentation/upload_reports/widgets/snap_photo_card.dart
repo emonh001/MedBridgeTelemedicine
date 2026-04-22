@@ -38,7 +38,7 @@ class _SnapPhotoCardState extends State<SnapPhotoCard> {
             child: Container(
               height: 180,
               decoration: BoxDecoration(
-                borderRadius: .circular(16),
+                borderRadius: BorderRadius.circular(16),
                 gradient: const LinearGradient(
                   colors: [Color(0xFF1E66D0), Color(0xFF2D7BEA)],
                 ),

@@ -8,6 +8,8 @@ class AssetsPaths {
   static const String safeIcon = "$_basePath/safe_icon.svg";
   static const String splashBg = "$_basePath/splash_bg.svg";
   static const String splashBgPng = "$_basePath/splash_bg.png";
+  static const String greenTikIcon = "$_basePath/green_tik.svg";
+  static const String googleIcon = "$_basePath/google_icon.png";
 
 
   static const String onBoardingImg1 = "$_basePath/onboard_img1.png";

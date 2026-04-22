@@ -1,8 +1,9 @@
 class RoutePaths {
   RoutePaths._();
 
-  // Basic routes
   static const String splash = '/';
+  static const String onboard = '/onboard';
+  static const String passwordReset = '/password-reset';
   static const String login = '/login';
   static const String new_case = '/new_case';
   static const String symptoms = '/symptoms';
@@ -13,9 +14,6 @@ class RoutePaths {
   static const String dashboard = '/dashboard';
   static const String booking = '/booking';
   static const String appointmentShedule = '/appointmentShedule';
-}
-  static const String booking = '/booking';
-  static const String appointment = '/appointment';
   static const String appointmentConfirmation = '/appointmentConfirmation';
 
 
@@ -27,6 +25,7 @@ class RoutePaths {
   static const String signUpDoctor = '/signUpDoctor';
   static const String signUpHealthWorker = '/signUpHealthWorker';
   static const String settingsScreen = '/settingsScreen';
-
-
 }
+
+
+

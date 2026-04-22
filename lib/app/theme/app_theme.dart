@@ -12,7 +12,7 @@ import 'outlined_button_theme.dart';
 
 class MyAppTheme {
   static final ThemeData _lightThemeData = ThemeData(
-    brightness: .light,
+    brightness: Brightness.light,
     primaryColor: ColorTheme.primary,
     disabledColor: ColorTheme.grey,
     textTheme: AppTextTheme.lightTextTheme,
@@ -26,7 +26,7 @@ class MyAppTheme {
   );
 
   static final ThemeData _darkThemeData = ThemeData(
-    brightness: .dark,
+    brightness: Brightness.dark,
     primaryColor: ColorTheme.primary,
     disabledColor: ColorTheme.grey,
     textTheme: AppTextTheme.darkTextTheme,
