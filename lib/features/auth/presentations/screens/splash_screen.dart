@@ -49,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     if (hasSeenOnboarding) {
 
-      context.go(RouteNames.passwordReset);
+      context.go(RouteNames.userProfile);
     } else {
       // Navigate to onboarding
       context.go(RouteNames.onboard);
