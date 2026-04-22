@@ -1,5 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:medbridge_telemedicine/app/routes/route_names.dart';
 
 import '../../data/models/validator.dart';
 import '../widgets/dropdown_menu_widget.dart';
@@ -188,7 +190,7 @@ class _SignUpDoctorScreenState extends State<SignUpDoctorScreen> {
       signUpInProgress = true;
     });
 
-    await Future.delayed(Duration(seconds: 2));
+    context.push(RouteNames.verifyOtp);
 
     setState(() {
       signUpInProgress = false;

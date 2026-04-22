@@ -11,6 +11,7 @@ import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_up_health_worker_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_up_patient_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/splash_screen.dart';
+import 'package:medbridge_telemedicine/features/auth/presentations/screens/verify_otp_screen.dart';
 import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/symptoms/screens/symptoms_screen.dart';
 import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/vital_input/screens/vitals_input_screen.dart';
 import '../../features/rural_health_worker/presentation/new_patient_case/screens/new_patient_case_screen.dart';
@@ -64,6 +65,13 @@ class AppRouter {
         name: RouteNames.login,
         pageBuilder: (context, state) =>
             const MaterialPage(child: LoginScreen()),
+      ),
+
+      GoRoute(
+        path: RouteNames.verifyOtp,
+        name: RouteNames.verifyOtp,
+        pageBuilder: (context, state) =>
+        const MaterialPage(child: VerifyOtpScreen()),
       ),
 
       GoRoute(
