@@ -7,6 +7,7 @@ import 'package:medbridge_telemedicine/features/auth/presentations/screens/forgo
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/login_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/onboarding/onboarding_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/password_reset_success_screen.dart';
+import 'package:medbridge_telemedicine/features/auth/presentations/screens/reset_password_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/role_selection_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_up_doctor_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_up_health_worker_screen.dart';
@@ -73,6 +74,13 @@ class AppRouter {
         name: RouteNames.forgotPassword,
         pageBuilder: (context, state) =>
         const MaterialPage(child: ForgotPasswordScreen()),
+      ),
+
+      GoRoute(
+        path: RouteNames.resetPassword,
+        name: RouteNames.resetPassword,
+        pageBuilder: (context, state) =>
+        const MaterialPage(child: ResetPasswordScreen()),
       ),
 
       GoRoute(
