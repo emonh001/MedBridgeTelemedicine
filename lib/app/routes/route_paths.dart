@@ -4,6 +4,7 @@ class RoutePaths {
   static const String splash = '/';
   static const String onboard = '/onboard';
   static const String passwordReset = '/password-reset';
+  static const String forgotPassword = '/forgot-password';
   static const String verifyOtp = '/verify-otp';
   static const String login = '/login';
   static const String new_case = '/new_case';

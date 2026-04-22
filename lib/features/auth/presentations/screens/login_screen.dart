@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:medbridge_telemedicine/app/constants/assets_paths.dart';
+import 'package:medbridge_telemedicine/app/routes/route_names.dart';
 import 'package:medbridge_telemedicine/app/routes/route_paths.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/widgets/sign-up-textfield.dart';
 import 'package:medbridge_telemedicine/features/common/presentations/widgets/primary_action_button.dart';
@@ -84,7 +85,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: .end,
                 children: [
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      context.push(RouteNames.forgotPassword);
+                    },
                     child: Text(
                       "Forgot Password?",
                       style: TextStyle(
