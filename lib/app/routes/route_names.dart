@@ -1,9 +1,10 @@
 class RouteNames {
   RouteNames._();
 
-  static const String splash = '/splash';
+  static const String splash = '/';
+  static const String onboard = '/onboard';
+  static const String passwordReset = '/password-reset';
   static const String login = '/login';
-  static const String onBoard = '/onBoard';
   static const String new_case = '/new_case';
   static const String symptoms = '/symptoms';
   static const String vital_input = '/vital_input';
@@ -14,8 +15,6 @@ class RouteNames {
   static const String booking = '/booking';
   static const String appointmentShedule = '/appointmentShedule';
 
-  static const String booking = '/booking';
-  static const String appointment = '/appointment';
   static const String appointmentConfirmation = '/appointmentConfirmation';
   static const String homeScreen = '/user_home_flow';
   static const String userParentScreen = '/user-parent';

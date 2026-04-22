@@ -35,7 +35,7 @@ class _InputFieldState extends State<InputField> {
           widget.label,
           style: const TextStyle(
             fontSize: 16,
-            fontWeight: .bold,
+            fontWeight: FontWeight.bold,
             color: Colors.blue
           ),
         ),

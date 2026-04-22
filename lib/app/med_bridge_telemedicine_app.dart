@@ -14,7 +14,7 @@ class MedBridgeTelemedicineApp extends StatelessWidget {
       routerConfig: AppRouter.router,
       theme: MyAppTheme.lightTheme,
       darkTheme: MyAppTheme.darkTheme,
-      themeMode: .light,
+      themeMode: ThemeMode.light,
     );
   }
 

@@ -24,7 +24,7 @@ class OnBoardingPages extends StatelessWidget {
         top: DeviceHelperFunctions.getAppBarHeight(),
       ),
       child: Column(
-        crossAxisAlignment: .start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.asset(onboardImage, width: double.infinity, height: 400,),
           Text(
@@ -32,7 +32,7 @@ class OnBoardingPages extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineMedium,
           ),
           const SizedBox(height: 12,),
-          Text(subtitle, textAlign: .start),
+          Text(subtitle, textAlign: TextAlign.start),
         ],
       ),
     );

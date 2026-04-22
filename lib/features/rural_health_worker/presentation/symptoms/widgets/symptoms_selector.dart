@@ -49,18 +49,18 @@ class _SymptomsSelectorState extends State<SymptomsSelector> {
 
             Center(
               child: Column(
-                mainAxisAlignment: .center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: widget.color.withOpacity(0.2),
-                      borderRadius: .circular(12),
+                      borderRadius: BorderRadius.circular(12),
                     ),
                     child: Icon(widget.icon, color: widget.color,size: 40,),
                   ),
                   const SizedBox(height: 8),
-                  Text(widget.title, textAlign: .center,style: TextStyle(fontSize: 20,fontWeight: .w600),),
+                  Text(widget.title, textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),),
                 ],
               ),
             )

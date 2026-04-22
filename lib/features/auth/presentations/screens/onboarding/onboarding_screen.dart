@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:medbridge_telemedicine/app/routes/route_names.dart';
 import 'package:provider/provider.dart';
 import 'package:medbridge_telemedicine/app/constants/assets_paths.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/widgets/onboarding/onboarding_dot_indicator.dart';
@@ -57,7 +59,7 @@ class OnboardingScreen extends StatelessWidget {
                     if (provider.isLastPage) {
                       await provider.completeOnboarding();
                       if (context.mounted) {
-                        Navigator.pushReplacementNamed(context, '/login');
+                        context.go(RouteNames.passwordReset);
                       }
                     } else {
                       provider.nextPage();

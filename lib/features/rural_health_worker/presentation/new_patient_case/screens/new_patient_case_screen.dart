@@ -34,13 +34,13 @@ class _UploadPatientCaseScreenState extends State<UploadPatientCaseScreen> {
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: Column(
-          crossAxisAlignment: .start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text("New Patient Case",style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
               SizedBox(height: 6),
               const Text("Complete the details below to initiate a consultation request for a remote specialist."),
               const SizedBox(height: 20),
-        
+
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
@@ -65,8 +65,8 @@ class _UploadPatientCaseScreenState extends State<UploadPatientCaseScreen> {
                     ),
                     SizedBox(height: 16),
                     AttachmentBox(),
-        
-        
+
+
                   ],
                 ),
               ),
@@ -74,7 +74,7 @@ class _UploadPatientCaseScreenState extends State<UploadPatientCaseScreen> {
               SubmitButton(text: 'Continue', onPressed: (){context.push('/vital_input');},),
 
 
-        
+
             ],
           ),
         ),
