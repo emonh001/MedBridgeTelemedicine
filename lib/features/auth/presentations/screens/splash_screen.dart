@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:medbridge_telemedicine/app/constants/assets_paths.dart';
+import 'package:medbridge_telemedicine/app/helpers/device_helper_functions.dart';
 import 'package:medbridge_telemedicine/app/routes/route_names.dart';
 
 
@@ -36,19 +37,22 @@ class _SplashScreenState extends State<SplashScreen> {
     _checkOnboardingAndNavigate();
   }
 
-  void _moveToNextScreen() async {
-    await Future.delayed(Duration(seconds: 3));
-    context.go(RouteNames.roleSelection);
-  }
+  void _checkOnboardingAndNavigate() async {
+    await Future.delayed(const Duration(seconds: 3));
+
+    if (!mounted) return;
+
+    // Check if user has seen onboarding
+    final hasSeenOnboarding = await OnboardingProvider.hasSeenOnboarding();
 
     if (!mounted) return;
 
     if (hasSeenOnboarding) {
-      // Navigate to login/home screen
-      context.go(RouteNames.login); // or RouteNames.home if user is already logged in
+
+      context.go(RouteNames.userProfile);
     } else {
       // Navigate to onboarding
-      context.go(RouteNames.onBoard);
+      context.go(RouteNames.onboard);
     }
   }
 
@@ -117,7 +121,20 @@ class _SplashScreenState extends State<SplashScreen> {
                     ],
                   ),
                   const SizedBox(height: 10),
+
                 ],
+              ),
+              Positioned(
+                right: 8,
+                bottom: DeviceHelperFunctions.getBottomNavigationBarHeight() * 1,
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: SvgPicture.asset(
+                    AssetsPaths.splashBottomIcon,
+                    height: 80,
+                    width: 80,
+                  ),
+                ),
               ),
             ],
           ),

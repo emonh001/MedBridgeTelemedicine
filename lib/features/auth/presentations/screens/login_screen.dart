@@ -9,6 +9,12 @@ import '../../../common/presentation/widgets/custom_button.dart';
 import '../../data/models/validator.dart';
 import '../widgets/login_text_field.dart';
 
+import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:medbridge_telemedicine/app/constants/assets_paths.dart';
+import 'package:medbridge_telemedicine/app/routes/route_paths.dart';
+import 'package:medbridge_telemedicine/features/auth/presentations/widgets/sign-up-textfield.dart';
+import 'package:medbridge_telemedicine/features/common/presentations/widgets/primary_action_button.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -24,9 +30,11 @@ class _LoginScreenState extends State<LoginScreen> {
   bool isObscure = true;
   bool rememberMe = false;
   bool loginInProgress = false;
+  final TextEditingController _emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(

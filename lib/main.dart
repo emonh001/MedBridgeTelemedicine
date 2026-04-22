@@ -1,7 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medbridge_telemedicine/app/med_bridge_telemedicine_app.dart';
+import 'package:provider/provider.dart';
+
+import 'app/view_models/app_viewmodel.dart';
 
 void main() {
-  runApp(const MedBridgeTelemedicineApp());
+  runApp(
+    MultiProvider(
+      providers: AppViewModels.viewModels,
+      child: ScreenUtilInit(
+        designSize: const Size(375, 812),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (context, child) {
+          return const MedBridgeTelemedicineApp();
+        },
+      ),
+    ),
+  );
 }
-
