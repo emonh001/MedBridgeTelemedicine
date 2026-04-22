@@ -5,7 +5,7 @@ import 'package:medbridge_telemedicine/features/bookings/presentation/screens/ca
 class CaseListScreen extends StatelessWidget {
   CaseListScreen({super.key});
 
-  List<CaseStatusModel> caseStatusList = [
+  final List<CaseStatusModel> caseStatusList = [
     CaseStatusModel(name: 'Amara Okafor', id: '#MB-99210', caseStatus: 'DIAGNOSED', caseDate: 'Oct 12, 2023'),
     CaseStatusModel(name: 'Liam Henderson', id: '#MB-88432', caseStatus: 'UNDER REVIEW', caseDate: 'Oct 14, 2023'),
     CaseStatusModel(name: 'Elena Rodriguez', id: '#MB-77219', caseStatus: 'SUBMITTED', caseDate: 'Oct 15, 2023'),
@@ -75,25 +75,29 @@ class CaseListScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 16),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF1E5BB8), foregroundColor: Colors.white),
-                    child: Text("ALL CASES"),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(backgroundColor: Colors.grey.shade200, foregroundColor: Colors.grey.shade700),
-                    child: Text("SUBMITTED"),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(backgroundColor: Colors.grey.shade200, foregroundColor: Colors.grey.shade700),
-                    child: Text("UNDER REVIEW"),
-                  ),
-                ],
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF1E5BB8), foregroundColor: Colors.white),
+                      child: Text("ALL CASES"),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.grey.shade200, foregroundColor: Colors.grey.shade700),
+                      child: Text("SUBMITTED"),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.grey.shade200, foregroundColor: Colors.grey.shade700),
+                      child: Text("UNDER REVIEW"),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(height: 16),
               ListView.builder(
