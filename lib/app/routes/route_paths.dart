@@ -19,6 +19,7 @@ class RoutePaths {
 
 
   static const String homeScreen = '/homeScreen';
+  static const String userProfile = '/user-profile';
   static const String parentScreen = '/parentScreen';
   static String get doctorProfileScreen => doctorProfileScreen;
   static const String roleSelection = '/roleSelection';

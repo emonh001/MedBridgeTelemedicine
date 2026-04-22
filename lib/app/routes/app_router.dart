@@ -12,6 +12,7 @@ import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_up_patient_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/splash_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/verify_otp_screen.dart';
+import 'package:medbridge_telemedicine/features/common/presentations/screens/user_profile_screen.dart';
 import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/symptoms/screens/symptoms_screen.dart';
 import 'package:medbridge_telemedicine/features/rural_health_worker/presentation/vital_input/screens/vitals_input_screen.dart';
 import '../../features/rural_health_worker/presentation/new_patient_case/screens/new_patient_case_screen.dart';
@@ -119,6 +120,13 @@ class AppRouter {
         name: RouteNames.roleSelection,
         pageBuilder: (context, state) =>
             const MaterialPage(child: RoleSelectionScreen()),
+      ),
+
+      GoRoute(
+        path: RoutePaths.userProfile,
+        name: RouteNames.userProfile,
+        pageBuilder: (context, state) =>
+        const MaterialPage(child: UserProfileScreen()),
       ),
 
       GoRoute(

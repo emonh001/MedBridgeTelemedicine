@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:medbridge_telemedicine/app/routes/route_names.dart';
+import 'package:medbridge_telemedicine/app/routes/route_paths.dart';
 
 import '../../data/models/validator.dart';
 import '../widgets/dropdown_menu_widget.dart';
@@ -24,6 +25,7 @@ class _SignUpDoctorScreenState extends State<SignUpDoctorScreen> {
   final specializedTEController = TextEditingController();
   final experienceTEController = TextEditingController();
   final hospitalNameTEController = TextEditingController();
+
   final _formKey = GlobalKey<FormState>();
   bool isChecked = false;
   bool signUpInProgress = false;
@@ -202,6 +204,7 @@ class _SignUpDoctorScreenState extends State<SignUpDoctorScreen> {
   }
   void _onTapLoginButton(){}
 
+  @override
   void dispose() {
     nameTEController.dispose();
     emailTEController.dispose();
