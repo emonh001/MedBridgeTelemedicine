@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../../app/routes/route_names.dart';
 import '../../data/models/validator.dart';
 import '../widgets/dropdown_menu_widget.dart';
 import '../widgets/sign-up-textfield.dart';
@@ -198,7 +200,7 @@ class _SignUpHealthWorkerScreenState extends State<SignUpHealthWorkerScreen> {
       signUpInProgress = true;
     });
 
-    await Future.delayed(Duration(seconds: 2));
+    context.push(RouteNames.verifyOtp);
 
     setState(() {
       signUpInProgress = false;

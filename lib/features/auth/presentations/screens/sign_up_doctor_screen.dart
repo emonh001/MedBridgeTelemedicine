@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:medbridge_telemedicine/app/routes/route_names.dart';
 import 'package:medbridge_telemedicine/app/routes/route_paths.dart';
 
 import '../../data/models/validator.dart';
@@ -179,25 +180,27 @@ class _SignUpDoctorScreenState extends State<SignUpDoctorScreen> {
   void _onTapTermsConditionButton(){}
   void _onTapPrivacyPolicyButton(){}
   void _onTapSignUpButton() async{
-    // if (!_formKey.currentState!.validate()) return;
-    //
-    // if (!isChecked) {
-    //   ScaffoldMessenger.of(context).showSnackBar(
-    //     SnackBar(content: Text('Please accept Terms & Conditions')),
-    //   );
-    //   return;
-    // }
-    // setState(() {
-    //   signUpInProgress = true;
-    // });
-    //
-    // await Future.delayed(Duration(seconds: 2));
-    //
-    // setState(() {
-    //   signUpInProgress = false;
-    // });
+    if (!_formKey.currentState!.validate()) return;
 
-    //context.go(RoutePaths.);
+    if (!isChecked) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Please accept Terms & Conditions')),
+      );
+      return;
+    }
+    setState(() {
+      signUpInProgress = true;
+    });
+
+    context.push(RouteNames.verifyOtp);
+
+    setState(() {
+      signUpInProgress = false;
+    });
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('All good')),
+    );
   }
   void _onTapLoginButton(){}
 
