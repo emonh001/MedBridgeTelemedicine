@@ -55,8 +55,8 @@ class AppRouter {
       ),
 
       GoRoute(
-        path: RoutePaths.passwordReset,
-        name: RouteNames.passwordReset,
+        path: RoutePaths.passwordResetSuccess,
+        name: RouteNames.passwordResetSuccess,
         pageBuilder: (context, state) =>
         const MaterialPage(child: PasswordResetSuccessScreen()),
       ),

@@ -84,7 +84,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: .end,
                 children: [
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      context.go(RoutePaths.passwordResetSuccess);
+                    },
                     child: Text(
                       "Forgot Password?",
                       style: TextStyle(

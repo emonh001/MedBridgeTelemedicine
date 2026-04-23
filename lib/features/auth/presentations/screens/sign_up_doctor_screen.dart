@@ -180,27 +180,30 @@ class _SignUpDoctorScreenState extends State<SignUpDoctorScreen> {
   void _onTapTermsConditionButton(){}
   void _onTapPrivacyPolicyButton(){}
   void _onTapSignUpButton() async{
-    if (!_formKey.currentState!.validate()) return;
+    // if (!_formKey.currentState!.validate()) return;
+    //
+    // if (!isChecked) {
+    //   ScaffoldMessenger.of(context).showSnackBar(
+    //     SnackBar(content: Text('Please accept Terms & Conditions')),
+    //   );
+    //   return;
+    // }
+    // setState(() {
+    //   signUpInProgress = true;
+    // });
+    //
+    // context.push(RouteNames.verifyOtp);
+    //
+    // setState(() {
+    //   signUpInProgress = false;
+    // });
+    //
+    // // ScaffoldMessenger.of(context).showSnackBar(
+    // //   SnackBar(content: Text('All good')),
+    // // );
 
-    if (!isChecked) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Please accept Terms & Conditions')),
-      );
-      return;
-    }
-    setState(() {
-      signUpInProgress = true;
-    });
+    context.go(RoutePaths.verifyOtp);
 
-    context.push(RouteNames.verifyOtp);
-
-    setState(() {
-      signUpInProgress = false;
-    });
-
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('All good')),
-    );
   }
   void _onTapLoginButton(){}
 
