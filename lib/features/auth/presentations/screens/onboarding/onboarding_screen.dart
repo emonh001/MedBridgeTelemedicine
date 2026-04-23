@@ -59,7 +59,7 @@ class OnboardingScreen extends StatelessWidget {
                     if (provider.isLastPage) {
                       await provider.completeOnboarding();
                       if (context.mounted) {
-                        context.go(RouteNames.passwordReset);
+                        context.go(RouteNames.roleSelection);
                       }
                     } else {
                       provider.nextPage();
