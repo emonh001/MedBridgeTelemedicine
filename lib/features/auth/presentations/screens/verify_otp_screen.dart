@@ -107,7 +107,7 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
                   SizedBox(
                     width: double.infinity,
                     child: PrimaryActionButton(text: "Verify", onTap: (){
-                      context.go(RouteNames.login);
+                      context.go(RouteNames.resetPassword);
                     }),
                   ),
 
