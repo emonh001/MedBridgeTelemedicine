@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:medbridge_telemedicine/app/routes/route_names.dart';
 import 'package:medbridge_telemedicine/app/routes/route_paths.dart';
+import 'package:medbridge_telemedicine/features/auth/presentations/screens/forgot_password_screen.dart';
 
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/login_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/onboarding/onboarding_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/password_reset_success_screen.dart';
+import 'package:medbridge_telemedicine/features/auth/presentations/screens/reset_password_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/role_selection_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_up_doctor_screen.dart';
 import 'package:medbridge_telemedicine/features/auth/presentations/screens/sign_up_health_worker_screen.dart';
@@ -66,6 +68,20 @@ class AppRouter {
         name: RouteNames.login,
         pageBuilder: (context, state) =>
             const MaterialPage(child: LoginScreen()),
+      ),
+
+      GoRoute(
+        path: RouteNames.forgotPassword,
+        name: RouteNames.forgotPassword,
+        pageBuilder: (context, state) =>
+        const MaterialPage(child: ForgotPasswordScreen()),
+      ),
+
+      GoRoute(
+        path: RouteNames.resetPassword,
+        name: RouteNames.resetPassword,
+        pageBuilder: (context, state) =>
+        const MaterialPage(child: ResetPasswordScreen()),
       ),
 
       GoRoute(
